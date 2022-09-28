@@ -25,16 +25,16 @@
     <finder-menu v-if="subject==='finder'" v-bind="$attrs" v-on="$listeners"/>
     <analysis-result-menu v-else-if="subject==='analysisResult'" v-bind="$attrs" v-on="$listeners"/>
 
-    <b-navbar-nav v-if="subject==='finder'" class="ml-auto">
-      <Feedback/>
-      <b-nav-item-dropdown right>
-        <template v-slot:button-content>{{currentLanguage}}</template>
-        <b-dropdown-item href="#" v-for="lang in supportLanguages" :key="lang.label"
-                         @click="$jifa.set_locale($i18n, lang.value); currentLanguage=lang.label">
-          {{lang.label}}
-        </b-dropdown-item>
-      </b-nav-item-dropdown>
-    </b-navbar-nav>
+<!--    <b-navbar-nav v-if="subject==='finder'" class="ml-auto">-->
+<!--      <Feedback/>-->
+<!--      <b-nav-item-dropdown right>-->
+<!--        <template v-slot:button-content>{{currentLanguage}}</template>-->
+<!--        <b-dropdown-item href="#" v-for="lang in supportLanguages" :key="lang.label"-->
+<!--                         @click="$jifa.set_locale($i18n, lang.value); currentLanguage=lang.label">-->
+<!--          {{lang.label}}-->
+<!--        </b-dropdown-item>-->
+<!--      </b-nav-item-dropdown>-->
+<!--    </b-navbar-nav>-->
   </b-navbar>
 </template>
 
